@@ -15,6 +15,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+// ✅ Test route to check if backend is working
 app.get("/", (req, res) => {
   res.send("Hello! Backend is working!");
 });
@@ -104,8 +105,12 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("DB connected successfully");
-    app.listen(process.env.PORT || 5000, () => {
-      console.log(`Server running on port ${process.env.PORT || 5000}`);
+
+    // 🚨 IMPORTANT: Don't manually set PORT variable in Railway. Railway provides it automatically.
+    const PORT = process.env.PORT || 5000;
+
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
     });
   })
   .catch((err) => console.log(err));
