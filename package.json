@@ -1,0 +1,26 @@
+{
+  "name": "backend-stack",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1",
+    "openai": "^5.8.2",
+    "react-hot-toast": "^2.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
